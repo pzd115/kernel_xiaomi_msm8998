@@ -1,7 +1,7 @@
 /*
  *
  * Automatically generated file; DO NOT EDIT.
- * Linux/arm64 4.4.210 Kernel Configuration
+ * Linux/arm64 4.4.214 Kernel Configuration
  *
  */
 #define CONFIG_NF_CONNTRACK_H323 1
