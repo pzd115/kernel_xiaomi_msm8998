@@ -1,0 +1,89 @@
+Merge 4.4.219 into kernel.lnx.4.4.r39-rel
+
+Changes in 4.4.219: (30 commits)
+        drm/bochs: downgrade pci_request_region failure from error to warning
+        ipv4: fix a RCU-list lock in fib_triestat_seq_show
+        net, ip_tunnel: fix interface lookup with no key
+        sctp: fix possibly using a bad saddr with a given dst
+        l2tp: Correctly return -EBADF from pppol2tp_getname.
+        net: l2tp: Make l2tp_ip6 namespace aware
+        l2tp: fix race in l2tp_recv_common()
+        l2tp: ensure session can't get removed during pppol2tp_session_ioctl()
+        l2tp: fix duplicate session creation
+        l2tp: Refactor the codes with existing macros instead of literal number
+        l2tp: ensure sessions are freed after their PPPOL2TP socket
+        l2tp: fix race between l2tp_session_delete() and l2tp_tunnel_closeall()
+        usb: gadget: uac2: Drop unused device qualifier descriptor
+        usb: gadget: printer: Drop unused device qualifier descriptor
+        padata: always acquire cpu_hotplug_lock before pinst->lock
+        mm: mempolicy: require at least one nodeid for MPOL_PREFERRED
+        net: stmmac: dwmac1000: fix out-of-bounds mac address reg setting
+        slcan: Don't transmit uninitialized stack data in padding
+        random: always use batched entropy for get_random_u{32,64}
+        tools/accounting/getdelays.c: fix netlink attribute length
+        power: supply: axp288_charger: Fix unchecked return value
+        xen-netfront: Fix mismatched rtnl_unlock
+        xen-netfront: Update features after registering netdev
+        ASoC: jz4740-i2s: Fix divider written at incorrect offset in register
+        IB/hfi1: Call kobject_put() when kobject_init_and_add() fails
+        Bluetooth: RFCOMM: fix ODEBUG bug in rfcomm_dev_ioctl
+        RDMA/cm: Update num_paths in cma_resolve_iboe_route error flow
+        clk: qcom: rcg: Return failure for RCG update
+        drm_dp_mst_topology: fix broken drm_dp_sideband_parse_remote_dpcd_read()
+        Linux 4.4.219
+
+Signed-off-by: Nathan Chancellor <natechancellor@gmail.com>
+
+Conflicts:
+	drivers/clk/qcom/clk-rcg2.c
+
+# Conflicts:
+#	drivers/char/random.c
+#
+# 似乎您正在做一个拣选提交。如果不对，请删除文件
+#	.git/CHERRY_PICK_HEAD
+# 然后重试。
+
+
+# 请为您的变更输入提交说明。以 '#' 开始的行将被忽略，而一个空的提交
+# 说明将会终止提交。
+#
+# 作者：  Nathan Chancellor <natechancellor@gmail.com>
+# 日期：  Mon Apr 13 08:55:50 2020 -0700
+#
+# 位于分支 master
+# 您的分支和 'origin/master' 出现了偏离，
+# 并且分别有 11 和 411 处不同的提交。
+#   （使用 "git pull" 来合并远程分支）
+#
+# 您在执行拣选提交 a1f34428a1ed 的操作。
+#
+# 要提交的变更：
+#	修改：     Documentation/accounting/getdelays.c
+#	修改：     Makefile
+#	新文件：   drivers/char/random.c.bak
+#	修改：     drivers/clk/qcom/clk-rcg2.c
+#	修改：     drivers/gpu/drm/bochs/bochs_hw.c
+#	修改：     drivers/gpu/drm/drm_dp_mst_topology.c
+#	修改：     drivers/infiniband/core/cma.c
+#	修改：     drivers/net/can/slcan.c
+#	修改：     drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c
+#	修改：     drivers/net/xen-netfront.c
+#	修改：     drivers/power/axp288_charger.c
+#	修改：     drivers/staging/rdma/hfi1/sysfs.c
+#	修改：     drivers/usb/gadget/function/f_printer.c
+#	修改：     kernel/padata.c
+#	修改：     mm/mempolicy.c
+#	修改：     net/bluetooth/rfcomm/tty.c
+#	修改：     net/ipv4/fib_trie.c
+#	修改：     net/ipv4/ip_tunnel.c
+#	修改：     net/l2tp/l2tp_core.c
+#	修改：     net/l2tp/l2tp_core.h
+#	修改：     net/l2tp/l2tp_eth.c
+#	修改：     net/l2tp/l2tp_ip.c
+#	修改：     net/l2tp/l2tp_ip6.c
+#	修改：     net/l2tp/l2tp_ppp.c
+#	修改：     net/sctp/ipv6.c
+#	修改：     net/sctp/protocol.c
+#	修改：     sound/soc/jz4740/jz4740-i2s.c
+#
