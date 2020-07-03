@@ -1,0 +1,2 @@
+  GEN     ./Makefile
+scripts/kconfig/conf  --silentoldconfig Kconfig
